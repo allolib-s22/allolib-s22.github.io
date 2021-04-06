@@ -1,6 +1,6 @@
 ---
 num: "Lecture 01"
-lecture_date: 2021-04-02
+lecture_date: 2021-04-01
 desc: "A focus on tutorials/synthesis/01_SineEnv.cpp"
 ready: true
 ---
