@@ -1,0 +1,53 @@
+# the production_url is the url that the parent/child site have in common
+#  e.g. production_url: https://ucsb-cs56.github.io
+#  for main site http://ucsb-cs56.github.io
+#  and child sites
+#    https://ucsb-cs56.github.io/w18
+#    https://ucsb-cs56.github.io/f18
+#    https://ucsb-cs56.github.io/s19
+#    etc.
+
+production_url: https://allolib-s21.github.io
+
+# List the title and url for each item on navigation bar.
+# For items that should be relative urls, put the baseurl of the site
+# they come from, / for main site, and /f18, /s19, etc for child sites.
+
+home:
+   title: UCSB CS130B/CMPTGCS 130H S21
+   url: /
+   baseurl: /
+
+main_dropdown:
+   title: Resources
+   items:
+     - title: Topics
+       url: /topics/
+
+offering_menus:
+  -
+    term: S21
+    baseurl: /
+    items: 
+      - title: Hwk
+        url: /hwk/
+        description: "Homework Assignments"
+      - title: Lab
+        url: /lab/
+        description: "Lab Assignments"
+      - title: Lecture
+        url: /lectures/
+        description: "Lecture"
+      - title: Software
+        url: /info/software/
+        description: "Software"
+      - title: Cal
+        url: /info/calendar/
+        description: "Assignment Calendar"
+      - title: Github
+        dropdown:
+           - title: allolib-s21
+             url: https://github.com/allolib-s21
+      - title: "More..."
+        url: /info/
+        description: "More Information"

@@ -1,0 +1,152 @@
+default_branch: main
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme@pcmultlectwithmasterormain
+
+kramdown:
+   parse_block_html: true
+
+include:
+   - _pages
+exclude:
+   - vendor
+   - setup.sh
+   - jekyll.sh
+   - .sass-cache
+   - Gemfile
+   - LICENSE
+   - .bundle
+
+timezone: America/Los_Angeles
+
+url: https://allolib-s21.github.io # the base hostname & protocol for your site
+baseurl: /  # the subpath of your site, e.g. "/blog"
+github_url: https://github.com/allolib-s21/allolib-s21.github.io
+
+
+
+course: "Allolib S21"
+qtr: "S21"
+qxx: "s21"
+quarter: "Spring 2021"
+
+lecture_days_of_week: TR
+
+assigned_text: " assigned"
+due_text: " due "
+
+start_week: 1
+start_date: 2021-03-28
+num_weeks: 10
+extra_exam_week: true
+
+cal_dates: >
+  [
+    {"label":"S21 1st day of instruction", "date":"2021-03-29" },	
+    {"label":"Univ Holiday", "date":"2021-05-31" , "holiday": true},
+    {"label":"S21 instruction ends", "date":"2021-06-04" },
+    {"label":"S21 finals start", "date":"2021-06-05" },
+    {"label":"CS156 Final noon-3pm", "date":"2021-06-08" },
+    {"label":"S21 finals end", "date":"2021-06-11" },
+    {"label":"S21 qtr ends", "date":"2021-06-11" }
+  ]
+
+gauchospace_course_page: https://gauchospace.ucsb.edu/courses/course/view.php?id=tbd
+github_org_name: allolib-s21
+github_org_url: https://github.com/allolib-s21
+
+collections:
+  hwk:
+    output: true
+    permalink: /hwk/:path/
+    last_before: false
+  hwkWIP:
+    output: true
+    permalink: /hwkWIP/:path/
+  lab:
+    output: true
+    permalink: /lab/:path/
+    last_before: false
+  labWIP:
+    output: true
+    permalink: /labWIP/:path/
+  info:
+    output: true
+    permalink: /info/:path/
+  lectures:
+    output: true
+    permalink: /lectures/:path/
+  staff:
+    output: true
+    permalink: /staff/:path
+
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: default
+  - 
+    scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture
+  - 
+    scope:
+      path: ""
+      type: hwk
+    values:
+      layout: hwk
+  - 
+    scope:
+      path: ""
+      type: hwkWIP
+    values:
+      layout: hwk
+  - 
+    scope:
+      path: ""
+      type: lab
+    values:
+      layout: lab
+  - 
+    scope:
+      path: ""
+      type: labWIP
+    values:
+      layout: lab
+  - 
+    scope:
+      path: ""
+      type: info
+    values:
+      layout: info
+  -
+    scope:
+      path: "syllabus.md"
+      type: info
+    values:
+      layout: handout
+  -
+    scope:
+     path: ""
+     type: staff
+    values:
+     layout: staff
+
+  - scope:
+     path: ""
+     type: pages
+    values:
+     layout: default
+
+head_scripts:
+   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+   - /static/js/select_section.js
+
