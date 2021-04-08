@@ -5,6 +5,12 @@ desc: "TBD"
 ready: false
 ---
 
+On this day, we did a check in with each student; some had demos ready to go, others didn't.
+
+We only got back around to one demo; that demo didn't quite work because the Zoom "noise cancelation" kicked in.
+
+We'll try again on Thursday, and we start right away with demos.
+
 Let's divide up the parts and try to understand them
 
 
