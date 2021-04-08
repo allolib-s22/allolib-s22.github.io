@@ -29,4 +29,16 @@ From github.com:AlloSphere-Research-Group/allolib_playground
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> ap/master
 pconrad@Phillips-MacBook-Pro demo1-pconrad % 
+pconrad@Phillips-MacBook-Pro demo1-pconrad % git push origin master
+Enumerating objects: 623, done.
+Counting objects: 100% (623/623), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (282/282), done.
+Writing objects: 100% (623/623), 1.34 MiB | 753.00 KiB/s, done.
+Total 623 (delta 311), reused 623 (delta 311), pack-reused 0
+remote: Resolving deltas: 100% (311/311), done.
+To https://github.com/allolib-s21/demo1-pconrad
+ * [new branch]      master -> master
+pconrad@Phillips-MacBook-Pro demo1-pconrad % 
+
 ```
