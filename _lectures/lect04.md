@@ -6,9 +6,28 @@ ready: false
 ---
 
 
+# The big picture
+
+We made two classes:
+* `class SineEnv : public SynthVoice {`
+* `class MyApp : public App {`
+
+The important thing to know is that the `SynthVoice` encapsulates all of hte proceses for sound and graphics.  It can be instantiated multiple times, and then gets rendered in a processing chain.
+
+The `App` is the one that provides the facilities for applications: window, audio context, keyboard callback, etc.
+
+The glue between them is a convenience class calls `SynthGUIManager<SineEnv>` which is parameterized with the `SynthVoice` instance.
+
+This makes the GUI from the primary stuff that the voice provides.
+
+
+
+# Deconstructed Code
+
 
 Let's divide up the parts of [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp)
 and try to understand them
+
 
 # Unit Generators
 
