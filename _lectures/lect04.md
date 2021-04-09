@@ -20,6 +20,20 @@ The glue between them is a convenience class calls `SynthGUIManager<SineEnv>` wh
 
 This makes the GUI from the primary stuff that the voice provides.
 
+# Starting with methods of the App
+
+*   `void onCreate() override {`  for "once per app" stuff
+*   There is also a `  void onInit() override {` which is different becuase it happens before the contexts are initialized.
+*   `  void onSound(AudioIOData& io) override {` is called once per full audio buffer of sound.. (not once per sample).
+*   `  void onAnimate(double dt) override {` called once per "simulation frame", which is tied to the graphics frame
+    - you get information about the time.   this is more like the "event loop in a game", which might be in a different thread from the
+      actual graphics processing, though by default it isn't... by default it is synchronized... by default it is called at the frame
+      rate of the graphics...    If my graphics frame rate is 30fps, this gets called 30 times per second, ideally... but the onDraw might
+      get called, for example, 60 times per second if we are doing stereo vision or multi-pass rendering...   You might get slow rates
+      on the onAnimate if the processing takes longer than a frame time.. 
+*   `void onDraw(Graphics& g) override {
+    - this is one pass of a framebuffer..   this might get called twice per frame, e.g. if there is stereo vision, or multi-pass rendering. 
+
 
 
 # Deconstructed Code
