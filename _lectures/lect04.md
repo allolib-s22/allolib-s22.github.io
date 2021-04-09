@@ -21,6 +21,17 @@ and try to understand them
   gam::EnvFollow<> mEnvFollow;
 ```
 
+These objects provide a new value with each tick of the clock, and by each tick of the clock what mean is, if we are sampling at 44100 Hz,
+each tick of the clock is 1/44100 of a second.   
+
+Different unit generators can work in different domains.
+
+If you define different domains, some unit generators can work in the video domain at 30fps, while others are in the audio domain.
+
+There is a default domain however. 
+
+The unit generators get "wired together", so to speak in the audio callback.  (See below.)
+
 # `Mesh`
 
 
