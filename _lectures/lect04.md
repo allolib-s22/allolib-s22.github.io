@@ -34,6 +34,7 @@ This makes the GUI from the primary stuff that the voice provides.
 *   `void onDraw(Graphics& g) override {
     - this is one pass of a framebuffer..   this might get called twice per frame, e.g. if there is stereo vision, or multi-pass rendering. 
 
+We also see the onKeyDown and onKeyUp which control the keyboard mapping to the musical keyboard in this case.
 
 
 # Deconstructed Code
