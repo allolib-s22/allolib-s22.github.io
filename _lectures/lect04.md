@@ -92,6 +92,17 @@ int main() {
 </pre>
 
 
+# No specific assignment yet beyond the lab00 placeholder
+
+There's no specific assignment yet beyond the lab00 placeholder; but in a course like this one, you are encouraged to not wait for specific
+instructions if you have an idea of what's needed or useful.  Just start creating content.
+
+If you need guidance or an idea, let me know and I'll try to help suggest a direciton.
+
+I know that some of you have already started exploring.  You can use the page you created in lab00 to start documenting your explorations with different
+sounds, techniques, code, etc.
+
+
 # Deconstructing `01_SineEnv.cpp`
 
 In this lecture, we'll work through the file [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) and try to make sense of it.
