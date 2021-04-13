@@ -96,7 +96,7 @@ sounds, techniques, code, etc.
 
 The formula for a square wave is the sum of the odd harmonics, each multiplied by 1/n where n is the harmonic number, e.g.
 
-$$ sin(x) + 1/3 sin(x*3) + 1/5 sin(x*5) \dots * $$
+$$ a\sin(x) + \frac{a}{3}\sin(3x) + \frac{a}{5}\sin(5x)  + \frac{a}{7}\sin(7x) \dots  $$
 
 
 Here's a spreadsheet where we can calculate the amplitude and harmonic values: 
