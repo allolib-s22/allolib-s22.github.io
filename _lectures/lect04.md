@@ -1,11 +1,11 @@
 ---
 num: "Lecture 04"
 lecture_date: 2021-04-13
-desc: "TBD"
+desc: "High Level Agenda for course, lab00, additive synthesis, SineEnv_01"
 ready: false
 ---
 
-# An agenda for the course
+# A high level agenda for the course
 
 In this course, I'd like us to try to both
 * Learn Allolib
