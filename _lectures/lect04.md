@@ -5,18 +5,20 @@ desc: "TBD"
 ready: false
 ---
 
+In this lecture, we'll work through the file [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) and try to make sense of it.
 
 # The big picture
 
-We made two classes:
+The file contains two C++ classes:
 * `class SineEnv : public SynthVoice {`
 * `class MyApp : public App {`
 
-The important thing to know is that the `SynthVoice` encapsulates all of hte proceses for sound and graphics.  It can be instantiated multiple times, and then gets rendered in a processing chain.
 
-The `App` is the one that provides the facilities for applications: window, audio context, keyboard callback, etc.
+A few notes:
+* The `SynthVoice` parent class from which `SineEnv` inherits encapsulates all of the proceses for sound and graphics.  It can be instantiated multiple times, and then gets rendered in a processing chain.
+* The `App` parent class is the one that provides the facilities for applications: window, audio context, keyboard callback, etc.
 
-The glue between them is a convenience class calls `SynthGUIManager<SineEnv>` which is parameterized with the `SynthVoice` instance.
+The glue between them is a convenience class calls `SynthGUIManager<SineEnv>` which is parameterized with the class `SineEnv` derived from `SynthVoice`.
 
 This makes the GUI from the primary stuff that the voice provides.
 
