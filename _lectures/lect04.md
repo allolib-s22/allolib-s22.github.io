@@ -78,16 +78,6 @@ int main() {
 }
 ```
 
-Is produced by:
-
-<pre>
-{% raw %}```cpp{% end raw %}
-using namespace std;
-int main() {
-
-}
-{% raw %}```{% end raw %}
-</pre>
 
 
 # No specific assignment yet beyond the lab00 placeholder
