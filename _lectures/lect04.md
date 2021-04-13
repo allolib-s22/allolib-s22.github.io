@@ -103,6 +103,32 @@ I know that some of you have already started exploring.  You can use the page yo
 sounds, techniques, code, etc.
 
 
+# Additive Synthesis, illustrated through Audacity
+
+
+The formula for a square wave is the sum of the odd harmonics, each multiplied by 1/n where n is the harmonic number, e.g.
+
+$$ sin(x) + 1/3 sin(x*3) + 1/5 sin(x*5) * $$
+
+
+```
+Fundamental Frequency	Amplitude	
+440	0.8	
+```		
+
+```
+Harmonic	Frequency	Amplitude
+	(Harmonic * Fundamental)	Amplitude * (1/harmonic)
+1	440	0.800000
+3	1320	0.266667
+5	2200	0.160000
+7	3080	0.114286
+9	3960	0.088889
+11	4840	0.072727
+13	5720	0.061538
+```
+
+
 # Deconstructing `01_SineEnv.cpp`
 
 In this lecture, we'll work through the file [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) and try to make sense of it.
