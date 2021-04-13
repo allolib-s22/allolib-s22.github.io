@@ -99,6 +99,8 @@ The formula for a square wave is the sum of the odd harmonics, each multiplied b
 $$ a\sin(x) + \frac{a}{3}\sin(3x) + \frac{a}{5}\sin(5x)  + \frac{a}{7}\sin(7x) \dots  $$
 
 
+What that looks like when graphed is here: <https://www.youtube.com/watch?v=Lu2nnvYORec>
+
 Here's a spreadsheet where we can calculate the amplitude and harmonic values: 
 * <https://docs.google.com/spreadsheets/d/1N9A6Jpid7ClQaMbIHqghPa53KN8YsDMdrmdCOg5oF5w/edit?usp=sharing>
 
@@ -119,6 +121,11 @@ Harmonic	Frequency	Amplitude
 13	5720	0.061538
 ```
 We can use Audacity <https://www.audacityteam.org/> to illustrate this and hear it.
+
+
+And here's how to do it using Allolib:
+
+* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/010_MakeSquareWave.cpp>
 
 # Deconstructing `01_SineEnv.cpp`
 
