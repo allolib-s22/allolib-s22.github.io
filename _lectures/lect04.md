@@ -82,13 +82,13 @@ int main() {
 Is produced by:
 
 <pre>
-```cpp
+`<!-- -->``cpp
 #include <cstdlib>
 using namespace std;
 int main() {
    cout << "Hello World" << endl;
 }
-```
+`<!-- -->``
 </pre>
 
 
@@ -108,8 +108,11 @@ sounds, techniques, code, etc.
 
 The formula for a square wave is the sum of the odd harmonics, each multiplied by 1/n where n is the harmonic number, e.g.
 
-$$ sin(x) + 1/3 sin(x*3) + 1/5 sin(x*5) * $$
+$$ sin(x) + 1/3 sin(x*3) + 1/5 sin(x*5) \dots * $$
 
+
+Here's a spreadsheet where we can calculate the amplitude and harmonic values: 
+* <https://docs.google.com/spreadsheets/d/1N9A6Jpid7ClQaMbIHqghPa53KN8YsDMdrmdCOg5oF5w/edit?usp=sharing>
 
 ```
 Fundamental Frequency	Amplitude	
@@ -127,7 +130,7 @@ Harmonic	Frequency	Amplitude
 11	4840	0.072727
 13	5720	0.061538
 ```
-
+We can use Audacity <https://www.audacityteam.org/> to illustrate this and hear it.
 
 # Deconstructing `01_SineEnv.cpp`
 
