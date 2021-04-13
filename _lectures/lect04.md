@@ -148,6 +148,10 @@ and try to understand them
 
 # Unit Generators
 
+Near the top of the we see that there is a collection of public data members all declared under the comment `// Unit Generators`.
+
+The idea of a Unit Generator has been a basic concept in sound synthesis for about long as folks have been using electronics and computers to do analog and digital synthesis.  The Wikipedia article (as of 04/13/2021) is a bit disapponting; it might be a nice class project for someone to take on improving both the content and the sources: <https://en.wikipedia.org/wiki/Unit_generator>, but it does have the basic idea.
+
 ```cpp
   // Unit generators
   gam::Pan<> mPan;
@@ -157,12 +161,12 @@ and try to understand them
   gam::EnvFollow<> mEnvFollow;
 ```
 
-These objects provide a new value with each tick of the clock, and by each tick of the clock what mean is, if we are sampling at 44100 Hz,
-each tick of the clock is 1/44100 of a second.   
+In Gamma (the part of Allolib that does sound synthesis), these Unit Generator objects provide a new value with each "tick of the clock".
 
-Different unit generators can work in different domains.
+* By "each tick of the clock" what we mean is, if we are sampling at 44100 Hz, each tick of the clock is 1/44100 of a second.   
+* Different unit generators can work in different *domains* (e.g. audio vs. graphics domain)
 
-If you define different domains, some unit generators can work in the video domain at 30fps, while others are in the audio domain.
+If you define different domains, some unit generators can work in the graphics domain at 30fps, while others are in the audio domain.
 
 There is a default domain however. 
 
@@ -178,6 +182,8 @@ The unit generators get "wired together", so to speak in the audio callback.  (S
 
 # `void init() override`
 
+Here's the first block of code.
+
 ```cpp
   // Initialize voice. This function will only be called once per voice when
   // it is created. Voices will be reused if they are idle.
@@ -189,13 +195,15 @@ The unit generators get "wired together", so to speak in the audio callback.  (S
 
     // We have the mesh be a sphere
     addDisc(mMesh, 1.0, 30);
+```
 
-    // This is a quick way to create parameters for the voice. Trigger
-    // parameters are meant to be set only when the voice starts, i.e. they
-    // are expected to be constant within a voice instance. (You can actually
-    // change them while you are prototyping, but their changes will only be
-    // stored and aplied when a note is triggered.)
+This second block of code shows  a quick way to create parameters for the voice. Trigger
+parameters are meant to be set only when the voice starts, i.e. they
+are expected to be constant within a voice instance. (You can actually
+change them while you are prototyping, but their changes will only be
+stored and aplied when a note is triggered.)
 
+```
     createInternalTriggerParameter("amplitude", 0.3, 0.0, 1.0);
     createInternalTriggerParameter("frequency", 60, 20, 5000);
     createInternalTriggerParameter("attackTime", 1.0, 0.01, 3.0);
@@ -206,15 +214,19 @@ The unit generators get "wired together", so to speak in the audio callback.  (S
 
 # `void onProcess(AudioIOData& io) override`
 
+
+Get the values from the parameters and apply them to the corresponding
+unit generators. You could place these lines in the onTrigger() function,
+but placing them here allows for realtime prototyping on a running
+voice, rather than having to trigger a new voice to hear the changes.
+
+Parameters will update values once per audio callback because they
+are outside the sample processing loop.
+
+
 ```cpp
   // The audio processing function
   void onProcess(AudioIOData& io) override {
-    // Get the values from the parameters and apply them to the corresponding
-    // unit generators. You could place these lines in the onTrigger() function,
-    // but placing them here allows for realtime prototyping on a running
-    // voice, rather than having to trigger a new voice to hear the changes.
-    // Parameters will update values once per audio callback because they
-    // are outside the sample processing loop.
     mOsc.freq(getInternalParameterValue("frequency"));
     mAmpEnv.lengths()[0] = getInternalParameterValue("attackTime");
     mAmpEnv.lengths()[2] = getInternalParameterValue("releaseTime");
