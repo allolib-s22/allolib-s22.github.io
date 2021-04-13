@@ -5,6 +5,7 @@ desc: "High Level Agenda for course, lab00, additive synthesis, SineEnv_01"
 ready: false
 ---
 
+
 # A high level agenda for the course
 
 In this course, I'd like us to try to both
@@ -93,6 +94,8 @@ sounds, techniques, code, etc.
 
 # Additive Synthesis, illustrated through Audacity
 
+
+First, a 10 minute video: <https://www.youtube.com/watch?v=YsZKvLnf7wU>
 
 The formula for a square wave is the sum of the odd harmonics, each multiplied by 1/n where n is the harmonic number, e.g.
 
