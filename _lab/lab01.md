@@ -4,7 +4,7 @@ assigned: 2021-03-29 12:30
 due: 2021-04-02 23:59
 layout: lab
 num: lab00
-ready: true
+ready: false
 signup_app: https://ucsb-cs-github-linker.herokuapp.com/
 slack: https://allolib-s21.slack.com
 course_org: https://github.com/allolib-s21
@@ -13,10 +13,13 @@ starter_repo: https://github.com/AlloSphere-Research-Group/allolib_playground
 prefix: demo1
 ---
 
-This assignment is `lab00`
+
+# STILL A WORK IN PROGRESS... PLEASE IGNORE FOR NOW
+
+This assignment is `lab01`
 
 If you find typos or problems with the lab instructions, please report
-them on the `#help-lab00` channel on Slack
+them on the `#help-lab01` channel on Slack
 
 # Goals
 
