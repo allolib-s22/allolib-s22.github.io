@@ -72,10 +72,9 @@ If you write <tt>```cpp</tt> on the line before, you'll get C++ specific syntax 
 Example:
 
 ```cpp
-#include <cstdlib>
 using namespace std;
 int main() {
-   cout << "Hello World" << endl;
+
 }
 ```
 
@@ -83,10 +82,9 @@ Is produced by:
 
 <pre>
 {% raw %}```cpp{% end raw %}
-#include <cstdlib>
 using namespace std;
 int main() {
-   cout << "Hello World" << endl;
+
 }
 {% raw %}```{% end raw %}
 </pre>
