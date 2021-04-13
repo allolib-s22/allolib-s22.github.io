@@ -82,13 +82,13 @@ int main() {
 Is produced by:
 
 <pre>
-`<!-- -->``cpp
+{% raw %}```cpp{% end raw %}
 #include <cstdlib>
 using namespace std;
 int main() {
    cout << "Hello World" << endl;
 }
-`<!-- -->``
+{% raw %}```{% end raw %}
 </pre>
 
 
