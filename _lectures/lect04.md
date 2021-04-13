@@ -5,6 +5,95 @@ desc: "TBD"
 ready: false
 ---
 
+# An agenda for the course
+
+In this course, I'd like us to try to both
+* Learn Allolib
+* Forge a path to help future students learn Allolib
+
+That includes both:
+* creating curriculum materials (collaboratively, as class&mdash;not just me!)
+* make improvements to the software itself, especially around how it is packaged and presented
+
+
+# Some of the barriers at the moment
+
+1. The fact that you need the whole thing to be able to do any work
+   * To work with Allolib Playground at the moment, you need to download the entire repo, and run your little piece of code within the context of the entire repo.
+   * Back before it was on GitHub, it was distributed as a `.zip` file, and you had to do the same; run your one little file in the context of the entire code base.
+   * The way that folks shared their demos was to email their one little file of code, which the instructor would then copy into their giant code base, and run.
+
+   It seems like there should be a better way; i.e. you should be able to have a separate independent repo with your Allolib project, and just
+   declare Allolib as a dependency, and have it pulled in automatically.  Or perhaps you compile Allolib down to a library or set of libraries that
+   you copy into your repo.
+   
+2. Working with the repo creates a lot of cruft that should not necessarily be committed to the repo.
+  
+   The `.gitignore` for the repo could use some work.  (I've talked with Andres about this and he's open to pull requests on that.)
+   
+3. It would be nice if there were a series of more "gradual" examples; the [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) is already way more complicated than a `Hello World` program might be.    
+
+   It would be nice if we presented a series of smaller steps where the current [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) was the *ending* point rather than the starting point, so that newcomers could understand all of the steps along the way.
+   
+4. It would be nice if there were an FAQ for new Allolib users, produced by new Allolib users, with the FAQs that they themselves (i.e. we ourselves!) 
+   actually encounter.
+   
+What else would you add to this list?  Lets take a moment on the "General" channel of the slack <https://allolib-s21.slack.com> to enter some ideas.
+
+# A step towards creating shared documentation
+
+I've created a lab assignment, <https://allolib-s21.github.io/lab/lab00/> that provides a place where each of the class members can
+contribute to a portion of the shared website for the course, i.e. <https://allolib-s21.github.io/lab/lab00/>.   It shouldn't take more than about 15 minutes, so please do that between now and next class.
+
+For now, the assignment is just to create a placeholder&mdash;though if you already have information that you think would be helpful to share with the class (or Allolib users in general), feel free to start populating your page with useful information.
+
+The syntax is "Github Flavored Markdown":
+* Beginner's Guide: <https://guides.github.com/features/mastering-markdown/>
+* Full Spec: <https://github.github.com/gfm/>
+
+One of the most useful things to know how to do is quote code.  For example,
+you might want to note that the C++ syntax for inheritance is `class SineEnv : public SynthVoice `,
+indicating that class `SinEnv` inherits from class `SynthVoice`.  
+
+This is done with backticks; for
+example, here's the source code for the paragraph above
+
+```
+One of the most useful things to know how to do is quote code.  For example,
+you might want to note that the C++ syntax for inheritance is `class SineEnv : public SynthVoice `,
+indicating that class `SinEnv` inherits from class `SynthVoice`.  
+```
+
+If you have a large block of code, you can get syntax highlighting by enclosing it in three backticks, like this: <tt>``<!-- -->`</tt>
+on a line by themselves, before and after your code.
+
+If you write <tt>```cpp</tt> on the line before, you'll get C++ specific syntax highlighting.
+
+Example:
+
+```cpp
+#include <cstdlib>
+using namespace std;
+int main() {
+   cout << "Hello World" << endl;
+}
+```
+
+Is produced by:
+
+<pre>
+```cpp
+#include <cstdlib>
+using namespace std;
+int main() {
+   cout << "Hello World" << endl;
+}
+```
+</pre>
+
+
+# Deconstructing `01_SineEnv.cpp`
+
 In this lecture, we'll work through the file [tutorials/synthesis/01_SineEnv.cpp](https://github.com/AlloSphere-Research-Group/allolib_playground/blob/master/tutorials/synthesis/01_SineEnv.cpp) and try to make sense of it.
 
 # The big picture
