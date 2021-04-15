@@ -5,8 +5,164 @@ desc: "Keyboard events"
 ready: false
 ---
 
+# Picking up from last time, and clarifying
+
+# Unit Generators
+
+Near the top of the we see that there is a collection of public data members all declared under the comment `// Unit Generators`.
+
+The idea of a Unit Generator has been a basic concept in sound synthesis for about long as folks have been using electronics and computers to do analog and digital synthesis.  The Wikipedia article (as of 04/13/2021) is a bit disapponting; it might be a nice class project for someone to take on improving both the content and the sources: <https://en.wikipedia.org/wiki/Unit_generator>, but it does have the basic idea.
+
+```cpp
+  // Unit generators
+  gam::Pan<> mPan;
+  gam::Sine<> mOsc;
+  gam::Env<3> mAmpEnv;
+  // envelope follower to connect audio output to graphics
+  gam::EnvFollow<> mEnvFollow;
+```
+
+In Gamma (the part of Allolib that does sound synthesis), these Unit Generator objects provide a new value with each "tick of the clock".
+
+* By "each tick of the clock" what we mean is, if we are sampling at 44100 Hz, each tick of the clock is 1/44100 of a second.   
+* Different unit generators can work in different *domains* (e.g. audio vs. graphics domain)
+
+If you define different domains, some unit generators can work in the graphics domain at 30fps, while others are in the audio domain.
+
+There is a default domain however. 
+
+The unit generators get "wired together", so to speak in the audio callback.  (See below.)
 
 
+# `void onProcess(AudioIOData& io) override`
+
+
+Get the values from the parameters and apply them to the corresponding
+unit generators. You could place these lines in the onTrigger() function,
+but placing them here allows for realtime prototyping on a running
+voice, rather than having to trigger a new voice to hear the changes.
+
+Parameters will update values once per audio callback because they
+are outside the sample processing loop.
+
+My understanding is that the loop ` while (io()) {` processes one sample at a time from a block of samples contained in an audio buffer
+available through `AudioIOData& io`.   (I may have misspoken in class and implied that the `onProcess` function is called once
+per sample; instead, I think it is more accurate to say that the `while (io())` loop is executed once for each sample.
+
+
+```cpp
+  // The audio processing function
+  void onProcess(AudioIOData& io) override {
+    mOsc.freq(getInternalParameterValue("frequency"));
+    mAmpEnv.lengths()[0] = getInternalParameterValue("attackTime");
+    mAmpEnv.lengths()[2] = getInternalParameterValue("releaseTime");
+    mPan.pos(getInternalParameterValue("pan"));
+    while (io()) {
+      float s1 = mOsc() * mAmpEnv() * getInternalParameterValue("amplitude");
+      float s2;
+      mEnvFollow(s1);
+      mPan(s1, s1, s2);
+      io.out(0) += s1;
+      io.out(1) += s2;
+    }
+    // We need to let the synth know that this voice is done
+    // by calling the free(). This takes the voice out of the
+    // rendering chain
+    if (mAmpEnv.done() && (mEnvFollow.value() < 0.001f)) free();
+  }
+```
+
+# Keyboard Event
+
+In `01_SineEnv`, the computer's "qwerty" keyboard is mapped to pitches like this:
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTrjghT3Pbc4_QEYIkrnehlIn20whDW7zvGom31EmaxOzuh5UruT4fq_4SH8PQnvyBRybMSpKBFRyUW/pub?w=932&amp;h=100">
+
+The code to do that is here:
+
+```
+// Whenever a key is pressed, this function is called
+  bool onKeyDown(Keyboard const& k) override {
+    if (ParameterGUI::usingKeyboard()) {  // Ignore keys if GUI is using
+                                          // keyboard
+      return true;
+    }
+    if (k.shift()) {
+      // If shift pressed then keyboard sets preset
+      int presetNumber = asciiToIndex(k.key());
+      synthManager.recallPreset(presetNumber);
+    } else {
+      // Otherwise trigger note for polyphonic synth
+      int midiNote = asciiToMIDI(k.key());
+      if (midiNote > 0) {
+        synthManager.voice()->setInternalParameterValue(
+            "frequency", ::pow(2.f, (midiNote - 69.f) / 12.f) * 432.f);
+        synthManager.triggerOn(midiNote);
+      }
+    }
+    return true;
+  }
+```
+
+A few things to note in this line of code.
+
+```
+ synthManager.voice()->setInternalParameterValue(
+            "frequency", ::pow(2.f, (midiNote - 69.f) / 12.f) * 432.f);
+```
+
+First, it would be better style to have declared:
+
+```cpp
+  const float A4 = 432.f; // or alternatively 440.f
+```
+
+and then written:
+
+```cpp
+synthManager.voice()->setInternalParameterValue(
+            "frequency", ::pow(2.f, (midiNote - 69.f) / 12.f) * 432.f);
+```	    
+
+The magic number `69.f` here is the midi note for A4 on the piano, which is the pitch corresponding to `432.f`. 
+
+The relationship between pitches on a well-tempered keyboard instrument is that octaves are separated by doubling.
+
+So, if we want to "double" a number in 12 small steps, we need to multiply each step by $$ 2^{\frac{1}{12}} $$.
+
+That's where we get the formula:
+
+```
+pow(2.f, (midiNote - 69.f) / 12.f) * 432.f)
+```
+
+The function ` int midiNote = asciiToMIDI(k.key());` is found in this file:
+
+* <https://github.com/AlloSphere-Research-Group/allolib/blob/master/src/scene/al_PolySynth.cpp>
+
+If you wanted to modify the keyboard layout that's the code you'd need to modify, e.g. if you wanted to:
+adapt the keyboard for something other than NOT qwerty, e.g dvorak, or azerty, etc.
+
+But there are other possibilities too.
+
+We could eliminate the keyboard mapping to piano keyboard idea altogeher, and do something completely different:
+* Map keys to drum sounds
+* Map keys to chords
+* Map keys to whole sequences
+
+Note that we need a way to signal when a note is finished also: 
+
+
+```
+  // Whenever a key is released this function is called
+  bool onKeyUp(Keyboard const& k) override {
+    int midiNote = asciiToMIDI(k.key());
+    if (midiNote > 0) {
+      synthManager.triggerOff(midiNote);
+    }
+    return true;
+  }
+```
 
 # Current barriers to entry with Allolib
 
