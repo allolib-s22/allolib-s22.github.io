@@ -3,6 +3,6 @@ title: Topics
 permalink: "/topics/"
 ---
 
-## Allolib-S21 Topics
+## Topics
 
 {% include topics_list.html %}
