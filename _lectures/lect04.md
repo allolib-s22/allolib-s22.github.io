@@ -86,3 +86,40 @@ There is a default domain however.
 The unit generators get "wired together", so to speak in the audio callback.  (See below.)
 
 
+# `void onProcess(AudioIOData& io) override`
+
+
+Get the values from the parameters and apply them to the corresponding
+unit generators. You could place these lines in the onTrigger() function,
+but placing them here allows for realtime prototyping on a running
+voice, rather than having to trigger a new voice to hear the changes.
+
+Parameters will update values once per audio callback because they
+are outside the sample processing loop.
+
+My understanding is that the loop ` while (io()) {` processes one sample at a time from a block of samples contained in an audio buffer
+available through `AudioIOData& io`.   (I may have misspoken in class and implied that the `onProcess` function is called once
+per sample; instead, I think it is more accurate to say that the `while (io())` loop is executed once for each sample.
+
+
+```cpp
+  // The audio processing function
+  void onProcess(AudioIOData& io) override {
+    mOsc.freq(getInternalParameterValue("frequency"));
+    mAmpEnv.lengths()[0] = getInternalParameterValue("attackTime");
+    mAmpEnv.lengths()[2] = getInternalParameterValue("releaseTime");
+    mPan.pos(getInternalParameterValue("pan"));
+    while (io()) {
+      float s1 = mOsc() * mAmpEnv() * getInternalParameterValue("amplitude");
+      float s2;
+      mEnvFollow(s1);
+      mPan(s1, s1, s2);
+      io.out(0) += s1;
+      io.out(1) += s2;
+    }
+    // We need to let the synth know that this voice is done
+    // by calling the free(). This takes the voice out of the
+    // rendering chain
+    if (mAmpEnv.done() && (mEnvFollow.value() < 0.001f)) free();
+  }
+```
