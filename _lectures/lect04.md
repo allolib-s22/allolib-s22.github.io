@@ -58,3 +58,31 @@ And here's how to do it using Allolib:
 
 * <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/010_MakeSquareWave.cpp>
 
+
+# Unit Generators
+
+Near the top of the we see that there is a collection of public data members all declared under the comment `// Unit Generators`.
+
+The idea of a Unit Generator has been a basic concept in sound synthesis for about long as folks have been using electronics and computers to do analog and digital synthesis.  The Wikipedia article (as of 04/13/2021) is a bit disapponting; it might be a nice class project for someone to take on improving both the content and the sources: <https://en.wikipedia.org/wiki/Unit_generator>, but it does have the basic idea.
+
+```cpp
+  // Unit generators
+  gam::Pan<> mPan;
+  gam::Sine<> mOsc;
+  gam::Env<3> mAmpEnv;
+  // envelope follower to connect audio output to graphics
+  gam::EnvFollow<> mEnvFollow;
+```
+
+In Gamma (the part of Allolib that does sound synthesis), these Unit Generator objects provide a new value with each "tick of the clock".
+
+* By "each tick of the clock" what we mean is, if we are sampling at 44100 Hz, each tick of the clock is 1/44100 of a second.   
+* Different unit generators can work in different *domains* (e.g. audio vs. graphics domain)
+
+If you define different domains, some unit generators can work in the graphics domain at 30fps, while others are in the audio domain.
+
+There is a default domain however. 
+
+The unit generators get "wired together", so to speak in the audio callback.  (See below.)
+
+
