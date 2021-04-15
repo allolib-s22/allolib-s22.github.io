@@ -5,6 +5,31 @@ desc: "Keyboard events"
 ready: false
 ---
 
+
+# My new piece
+
+Not claiming it's "great" art or even "good" art.  It's just "playing".
+
+Don't necessarily aim for great art.  Just "play".  Occasionally something good, or something great will pop out.
+
+* Tell: The story about the pottery class where half were graded on quantity and half were graded on quality.
+
+  * The half that was graded on quantity also produced the best pottery.
+  * Because they just cranked out pottery, and the practice made them good at it.
+  * The ones that aimed for perfection got stuck, frustrated, and didn't learn as much.
+
+So here's my "not great art piece".
+
+* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/020_Sequence.cpp>
+
+It's a study on "Row, Row, Row your boat".
+
+A few techniques it illustrated:
+* Using the keyboard to trigger events other than note on, note off
+* Hard coding sequences, and then parameterizing those
+* The ability to perform a [canon](https://en.wikipedia.org/wiki/Canon_(music))
+* The abilty to perform a canon at various intervals.
+
 # Picking up from last time, and clarifying
 
 # Unit Generators
