@@ -53,15 +53,11 @@ cal_dates: >
     {"label":"S21 finals end", "date":"2021-06-11" },
     {"label":"S21 qtr ends", "date":"2021-06-11" }
   ]
-
 gauchospace_course_page: https://gauchospace.ucsb.edu/courses/course/view.php?id=tbd
 github_org_name: allolib-s21
 github_org_url: https://github.com/allolib-s21
 
 collections:
-  topics:
-    output: true
-    permalink: /topics/:path/
   hwk:
     output: true
     permalink: /hwk/:path/
@@ -148,14 +144,7 @@ defaults:
      type: pages
     values:
      layout: default
-     
- - scope:
-      path: ""
-      type: topics
-    values:
-      layout: default
 
 head_scripts:
    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
    - /static/js/select_section.js
-
