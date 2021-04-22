@@ -1,6 +1,6 @@
 ---
 num: "Lecture 04"
-lecture_date: 2021-04-13
+lecture_date: 2021-04-15
 desc: "High Level Agenda for course, lab00, additive synthesis"
 ready: false
 ---
