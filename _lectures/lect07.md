@@ -1,6 +1,6 @@
 ---
-num: "Lecture 06"
-lecture_date: 2021-04-20
+num: "Lecture 07"
+lecture_date: 2021-04-22
 desc: ""
 ready: false
 ---
