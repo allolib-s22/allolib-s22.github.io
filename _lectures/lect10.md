@@ -82,3 +82,66 @@ Demo from Phill:
     playSequence(fjSequence, bpm, instrument);
   }
   ```
+
+  ```cpp
+  void playSequence(Sequence *s, float bpm, Instrument instrument = INSTR_SQUARE)
+  {
+    float secondsPerBeat = 60.0f / bpm;
+
+    std::vector<Note> *notes = s->getNotes();
+
+    for (auto &note : *notes)
+    {
+      playNote(
+          note.getFreq(),
+          note.getTime() * secondsPerBeat,
+          note.getDuration() * secondsPerBeat,
+          note.getAmp(),
+          note.getAttack(),
+          note.getDecay(),
+          instrument);
+    }
+  }
+  
+# Changes to playNote
+
+OLD
+
+  ```cpp
+  
+  ```
+  
+NEW
+  ```cpp
+     void playNote(float freq, float time, float duration = 0.5, float amp = 0.2, float attack = 0.1, float decay = 0.1, Instrument instrument = INSTR_SQUARE)
+    {
+      SynthVoice *voice;
+      switch (instrument)
+      {
+
+      case INSTR_SQUARE:
+        voice = synthManager.synth().getVoice<SquareWave>();
+        voice->setInternalParameterValue("amplitude", amp);
+        voice->setInternalParameterValue("frequency", freq);
+        voice->setInternalParameterValue("attackTime", 0.1);
+        voice->setInternalParameterValue("releaseTime", 0.1);
+        voice->setInternalParameterValue("pan", -1.0);
+        break;
+
+      case INSTR_FM:
+        voice = synthManager.synth().getVoice<FM>();
+
+        voice->setInternalParameterValue("amplitude", amp);
+        voice->setInternalParameterValue("freq", freq);
+        voice->setInternalParameterValue("attackTime", 0.1);
+        voice->setInternalParameterValue("releaseTime", 0.1);
+        voice->setInternalParameterValue("pan", 1.0);
+
+        break;
+      default:
+        voice = nullptr;
+        break;
+      }
+      synthManager.synthSequencer().addVoiceFromNow(voice, time, duration);
+    }
+  ```
