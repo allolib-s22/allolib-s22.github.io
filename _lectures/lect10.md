@@ -108,7 +108,13 @@ Demo from Phill:
 OLD
 
   ```cpp
-  
+  void playNote(float freq, float time, float duration = 0.5, float amp = 0.2, float attack = 0.1, float decay = 0.1)
+  {
+    auto *voice = synthManager.synth().getVoice<SquareWave>();
+    // amp, freq, attack, release, pan
+    voice->setTriggerParams({amp, freq, 0.1, 0.1, 0.0});
+    synthManager.synthSequencer().addVoiceFromNow(voice, time, duration);
+  }
   ```
   
 NEW
