@@ -71,3 +71,14 @@ Demo from Phill:
       return false;
     }
   ```
+  
+  Method definition:
+  
+  ```cpp
+   void playSequenceFJ(float offset = 1.0, float bpm = 120.0, Instrument instrument = INSTR_SQUARE)
+  {
+    std::cout << "playSequenceFJ: offset=" << offset << " bpm=" << bpm << std::endl;
+    Sequence *fjSequence = sequenceFJ(offset);
+    playSequence(fjSequence, bpm, instrument);
+  }
+  ```
