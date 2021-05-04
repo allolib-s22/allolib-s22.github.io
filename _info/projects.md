@@ -9,7 +9,7 @@ Info about projects will appear here
 * <https://allolib-s21.github.io/notes-emilyomahony>
 * <https://allolib-s21.github.io/notes-colette-lee>
 * <https://allolib-s21.github.io/notes-gabrielsoule>
-* <https://allolib-s21.github.io/notes-gabrielsouleadamschmieder>
+* <https://allolib-s21.github.io/notes-adamschmieder>
 * <https://allolib-s21.github.io/notes-yangevelyn>
 * <https://allolib-s21.github.io/notes-AlphaModder>
 * <https://allolib-s21.github.io/notes-alexrasla>
