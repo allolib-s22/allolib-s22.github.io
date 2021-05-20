@@ -11,7 +11,7 @@ Info about projects will appear here
 * <https://allolib-s21.github.io/notes-gabrielsoule>
 * <https://allolib-s21.github.io/notes-adamschmieder>
 * <https://allolib-s21.github.io/notes-yangevelyn>
-* <https://allolib-s21.github.io/notes-AlphaModder>
+* <https://allolib-s21.github.io/notes-Mitchell57>
 * <https://allolib-s21.github.io/notes-alexrasla>
 * <https://allolib-s21.github.io/notes-rajansaini691>
 * <https://allolib-s21.github.io/notes-mike-k999>
