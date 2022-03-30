@@ -7,6 +7,8 @@
 #    https://ucsb-cs56.github.io/s19
 #    etc.
 
+current: true
+
 production_url: https://allolib-s22.github.io
 
 # List the title and url for each item on navigation bar.
@@ -14,7 +16,7 @@ production_url: https://allolib-s22.github.io
 # they come from, / for main site, and /f18, /s19, etc for child sites.
 
 home:
-   title: UCSB CS130B/CMPTGCS 130H s22
+   title: UCSB CS190D/CMPTGCS 130H S22
    url: /
    baseurl: /
 
