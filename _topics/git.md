@@ -10,11 +10,11 @@ Using git to add a remote for Allolib Playground
 ```
 Last login: Tue Apr  6 20:52:53 on ttys002
 pconrad@Phillips-MacBook-Pro ~ % cd github
-pconrad@Phillips-MacBook-Pro github % cd allolib-s21               
-pconrad@Phillips-MacBook-Pro allolib-s21 % git clone https://github.com/allolib-s21/demo1-pconrad
+pconrad@Phillips-MacBook-Pro github % cd allolib-s22               
+pconrad@Phillips-MacBook-Pro allolib-s22 % git clone https://github.com/allolib-s22/demo1-pconrad
 Cloning into 'demo1-pconrad'...
 warning: You appear to have cloned an empty repository.
-pconrad@Phillips-MacBook-Pro allolib-s21 % cd demo1-pconrad 
+pconrad@Phillips-MacBook-Pro allolib-s22 % cd demo1-pconrad 
 pconrad@Phillips-MacBook-Pro demo1-pconrad % git remote add ap git@github.com:AlloSphere-Research-Group/allolib_playground.git
 pconrad@Phillips-MacBook-Pro demo1-pconrad % git checkout -b master
 Switched to a new branch 'master'
@@ -37,7 +37,7 @@ Compressing objects: 100% (282/282), done.
 Writing objects: 100% (623/623), 1.34 MiB | 753.00 KiB/s, done.
 Total 623 (delta 311), reused 623 (delta 311), pack-reused 0
 remote: Resolving deltas: 100% (311/311), done.
-To https://github.com/allolib-s21/demo1-pconrad
+To https://github.com/allolib-s22/demo1-pconrad
  * [new branch]      master -> master
 pconrad@Phillips-MacBook-Pro demo1-pconrad % 
 

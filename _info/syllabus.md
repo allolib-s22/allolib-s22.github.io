@@ -14,7 +14,7 @@ Basic Facts
    * The class will be a **synchronous online** class, offered over Zoom.  
 * Office Hours: See: <http://www.cs.ucsb.edu/~pconrad/ofchrs>  
 
-Course website: <https://allolib-s21.github.io/>
+Course website: <https://allolib-s22.github.io/>
 
 
 # Course Description

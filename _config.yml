@@ -22,15 +22,15 @@ exclude:
 
 timezone: America/Los_Angeles
 
-url: https://allolib-s21.github.io # the base hostname & protocol for your site
+url: https://allolib-s22.github.io # the base hostname & protocol for your site
 baseurl: /  # the subpath of your site, e.g. "/blog"
-github_url: https://github.com/allolib-s21/allolib-s21.github.io
+github_url: https://github.com/allolib-s22/allolib-s22.github.io
 
 
 
-course: "Allolib S21"
-qtr: "S21"
-qxx: "s21"
+course: "Allolib s22"
+qtr: "s22"
+qxx: "s22"
 quarter: "Spring 2021"
 
 lecture_days_of_week: TR
@@ -39,23 +39,26 @@ assigned_text: " assigned"
 due_text: " due "
 
 start_week: 1
-start_date: 2021-03-28
+start_date: 2022-03-27
 num_weeks: 10
 extra_exam_week: true
 
 cal_dates: >
-  [
-    {"label":"S21 1st day of instruction", "date":"2021-03-29" },	
-    {"label":"Univ Holiday", "date":"2021-05-31" , "holiday": true},
-    {"label":"S21 instruction ends", "date":"2021-06-04" },
-    {"label":"S21 finals start", "date":"2021-06-05" },
-    {"label":"CS156 Final noon-3pm", "date":"2021-06-08" },
-    {"label":"S21 finals end", "date":"2021-06-11" },
-    {"label":"S21 qtr ends", "date":"2021-06-11" }
+  [                                                                            
+    {"label":"S22 1st day of instruction", "date":"2022-03-27" },
+    {"label":"Memorial Day", "date":"2022-05-30" },
+    {"label":"S22 instruction ends", "date":"2022-06-03" },
+    {"label":"S22 finals start", "date":"2022-06-04" },                     
+    {"label":"S22 CS156 FINAL (4pm-7pm)", "date":"2022-06-07" },                      
+    {"label":"S22 finals end", "date":"2022-06-10" },                          
+    {"label":"S22 qtr ends", "date":"2022-06-10" }                              
   ]
+
+
+
 gauchospace_course_page: https://gauchospace.ucsb.edu/courses/course/view.php?id=tbd
-github_org_name: allolib-s21
-github_org_url: https://github.com/allolib-s21
+github_org_name: allolib-s22
+github_org_url: https://github.com/allolib-s22
 
 collections:
   hwk:

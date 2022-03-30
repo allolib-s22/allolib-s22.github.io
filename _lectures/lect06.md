@@ -23,6 +23,6 @@ Today I have another demo of code for a canon, but with a difference.
 
 Compare:
 * First version (press 1 key to play melody): 
-  - <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/030_FrereJacque.cpp>
+  - <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/030_FrereJacque.cpp>
 * Second version (press 1,2,3,4 or q,w,e,r to play melody):
-  - <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/032_TimeSignature.cpp>
+  - <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/032_TimeSignature.cpp>

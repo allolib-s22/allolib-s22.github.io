@@ -7,14 +7,14 @@
 #    https://ucsb-cs56.github.io/s19
 #    etc.
 
-production_url: https://allolib-s21.github.io
+production_url: https://allolib-s22.github.io
 
 # List the title and url for each item on navigation bar.
 # For items that should be relative urls, put the baseurl of the site
 # they come from, / for main site, and /f18, /s19, etc for child sites.
 
 home:
-   title: UCSB CS130B/CMPTGCS 130H S21
+   title: UCSB CS130B/CMPTGCS 130H s22
    url: /
    baseurl: /
 
@@ -26,7 +26,7 @@ main_dropdown:
 
 offering_menus:
   -
-    term: S21
+    term: s22
     baseurl: /
     items: 
       - title: Hwk
@@ -46,8 +46,8 @@ offering_menus:
         description: "Assignment Calendar"
       - title: Github
         dropdown:
-           - title: allolib-s21
-             url: https://github.com/allolib-s21
+           - title: allolib-s22
+             url: https://github.com/allolib-s22
       - title: "More..."
         url: /info/
         description: "More Information"

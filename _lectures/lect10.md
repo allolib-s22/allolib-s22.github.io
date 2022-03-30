@@ -8,7 +8,7 @@ ready: true
 
 Demo from Phill: 
 
-* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/040_FrereJacquesTwoVoices.cpp>
+* <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/040_FrereJacquesTwoVoices.cpp>
 * We see two `SynthVoice` classes:
   - a `SquareWave` class built with additive synthesis based on the `SineEnv` class from `01_SineEnv`
   - an `FM` class based on the `FM` class from `04_FM`

@@ -6,9 +6,9 @@ layout: lab
 num: lab00
 ready: false
 signup_app: https://ucsb-cs-github-linker.herokuapp.com/
-slack: https://allolib-s21.slack.com
-course_org: https://github.com/allolib-s21
-course_org_name: allolib-s21
+slack: https://allolib-s22.slack.com
+course_org: https://github.com/allolib-s22
+course_org_name: allolib-s22
 starter_repo: https://github.com/AlloSphere-Research-Group/allolib_playground
 prefix: notes
 ---
@@ -21,7 +21,7 @@ tools for creating sound and visuals using Allolib.
 So, as we make discoveries about things, we'd like to be able to share those with one another.
 
 As a way of organizing this, in this assignment, you'll each create a web page
-that is part of the website <https://allolib-s21.github.io>
+that is part of the website <https://allolib-s22.github.io>
 
 I've created a repo for each of you with the naming convention: `notes-GitHubId`
 
@@ -30,8 +30,8 @@ where you can share information that you think would be generally useful for the
 
 # Step 1: Add an index.md to your repo.
 
-First, locate your repo by logging into to GitHub, and visiting <https://github.com/allolib-s21>.  You should 
-find a repo `notes-GitHubId`, where `GitHubId` is your GitHub id.  (If you don't, ask for help on the course slack, <https://allolib-s21.slack.com>.)
+First, locate your repo by logging into to GitHub, and visiting <https://github.com/allolib-s22>.  You should 
+find a repo `notes-GitHubId`, where `GitHubId` is your GitHub id.  (If you don't, ask for help on the course slack, <https://allolib-s22.slack.com>.)
 
 When you start, this will be an empty repo, and so the page may look like this:
 
@@ -83,7 +83,7 @@ Then click `Save`.   That should change the screen to look like this:
 
 ![image](https://user-images.githubusercontent.com/1119017/114592667-07f0e580-9c40-11eb-877c-b385f486b5d0.png)
 
-At that point, the link shown (in this case, <https://allolib-s21.github.io/notes-cgaucho/>, should take you to your published web page.
+At that point, the link shown (in this case, <https://allolib-s22.github.io/notes-cgaucho/>, should take you to your published web page.
 
 Note that it sometimes takes between 60 seconds or as long as up to 5 minutes before the page appears (depending on server load), so you might have to refresh 
 a few times before it shows up.

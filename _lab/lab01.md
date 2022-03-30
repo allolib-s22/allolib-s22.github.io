@@ -6,9 +6,9 @@ layout: lab
 num: lab00
 ready: false
 signup_app: https://ucsb-cs-github-linker.herokuapp.com/
-slack: https://allolib-s21.slack.com
-course_org: https://github.com/allolib-s21
-course_org_name: allolib-s21
+slack: https://allolib-s22.slack.com
+course_org: https://github.com/allolib-s22
+course_org_name: allolib-s22
 starter_repo: https://github.com/AlloSphere-Research-Group/allolib_playground
 prefix: demo1
 ---
@@ -33,10 +33,10 @@ If you are already very familiar with GitHub, this way should be easier and fast
 The idea is to get your working copy of Allolib up on GitHub where it can be shared with others in the course.
 
 1. Find the place where you already cloned the Allosphere Playground repo.
-2. In the github organization allolib-s21, where you should be a member, you should find a repo `demo1-cgaucho` where `cgaucho` is your username.
+2. In the github organization allolib-s22, where you should be a member, you should find a repo `demo1-cgaucho` where `cgaucho` is your username.
 3. Add this repo as a remote called `demo1` with the command below (replacing `cgaucho` with your github id)
    ```
-   git remote add demo1 git@github.com:allolib-s21/demo1-cgaucho.git
+   git remote add demo1 git@github.com:allolib-s22/demo1-cgaucho.git
    ```
 4. Do a `git checkout -b main` then do a `git push demo1 main` to publish the contents of this repo into your demo1 repo
 5. Now, you should be able to publish new branches and or changes as needed.

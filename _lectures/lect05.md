@@ -22,7 +22,7 @@ A "round" is a kind of canon&mdash;all rounds are canons, though not all canons 
 
 A famous round is "Row, Row, Row Your Boat", which is the melodic material in this piece:
 
-* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/020_Sequence.cpp>
+* <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/020_Sequence.cpp>
 
 We also heard several other demos by students.
 
@@ -41,7 +41,7 @@ Don't necessarily aim for great art.  Just "play".  Occasionally something good,
 
 So here's my "not great art piece".
 
-* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/020_Sequence.cpp>
+* <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/020_Sequence.cpp>
 
 It's a study on "Row, Row, Row your boat".
 
@@ -232,7 +232,7 @@ Note that we need a way to signal when a note is finished also:
 4. It would be nice if there were an FAQ for new Allolib users, produced by new Allolib users, with the FAQs that they themselves (i.e. we ourselves!) 
    actually encounter.
    
-What else would you add to this list?  Lets take a moment on the "General" channel of the slack <https://allolib-s21.slack.com> to enter some ideas.
+What else would you add to this list?  Lets take a moment on the "General" channel of the slack <https://allolib-s22.slack.com> to enter some ideas.
 
 
 
@@ -276,7 +276,7 @@ We can use Audacity <https://www.audacityteam.org/> to illustrate this and hear 
 
 And here's how to do it using Allolib:
 
-* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/010_MakeSquareWave.cpp>
+* <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/010_MakeSquareWave.cpp>
 
 # Deconstructing `01_SineEnv.cpp`
 

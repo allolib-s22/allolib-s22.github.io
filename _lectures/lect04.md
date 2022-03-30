@@ -56,7 +56,7 @@ We can use Audacity <https://www.audacityteam.org/> to illustrate this and hear 
 
 And here's how to do it using Allolib:
 
-* <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/010_MakeSquareWave.cpp>
+* <https://github.com/allolib-s22/demo1-pconrad/blob/master/tutorials/allolib-s22/010_MakeSquareWave.cpp>
 
 
 # Unit Generators
