@@ -1,16 +1,16 @@
 ---
 desc: Getting Started
-assigned: 2021-03-29 12:30
-due: 2021-04-02 23:59
+assigned: 2021-03-30 12:30
+due: 2021-04-06 11:00
 layout: lab
-num: lab00
+num: lab01
 ready: false
 signup_app: https://ucsb-cs-github-linker.herokuapp.com/
 slack: https://allolib-s22.slack.com
 course_org: https://github.com/allolib-s22
 course_org_name: allolib-s22
 starter_repo: https://github.com/AlloSphere-Research-Group/allolib_playground
-prefix: demo1
+prefix: lab01
 ---
 
 
@@ -32,15 +32,34 @@ If you are already very familiar with GitHub, this way should be easier and fast
 
 The idea is to get your working copy of Allolib up on GitHub where it can be shared with others in the course.
 
-1. Find the place where you already cloned the Allosphere Playground repo.
-2. In the github organization allolib-s22, where you should be a member, you should find a repo `demo1-cgaucho` where `cgaucho` is your username.
-3. Add this repo as a remote called `demo1` with the command below (replacing `cgaucho` with your github id)
+1. In the github organization allolib-s22, where you should be a member, you should find a repo <tt>{{page.prefix}}-cgaucho</tt> where `cgaucho` is your username.
+2. Clone this repo to your own machine.
+3. Add a remote for the allolib-playground repo:
    ```
-   git remote add demo1 git@github.com:allolib-s22/demo1-cgaucho.git
+   git remote add allolib-playground git@github.com:AlloSphere-Research-Group/allolib_playground.git
    ```
-4. Do a `git checkout -b main` then do a `git push demo1 main` to publish the contents of this repo into your demo1 repo
+4. Do these commands to get a copy of `allolib-playground/master` into your local repo as
+   the `origin/main` branch:
+   
+   ```
+   git checkout -b master
+   git pull allolib_playground master
+   git checkout -b main
+   git push origin main
+   ```
+
 5. Now, you should be able to publish new branches and or changes as needed.
 
+Then: 
+* Set up the preliminaries needed for Allolib: Follow the instructions here for your platform: <https://github.com/AlloSphere-Research-Group/allolib/blob/master/readme.md>
+* Follow the instructions for getting started with Allolib-Playground: <https://github.com/AlloSphere-Research-Group/allolib_playground>
+* Try running the Sine Wave demo:
+  ```
+  ./run.sh tutorials/synthesis/01_SineEnv.cpp
+  ```
+
+If it works, you are done!  You can demo during class to show the instructor that
+you were successful.
 
 # The Long Way
 
@@ -90,28 +109,30 @@ oriented towards "CSIL"; you may need to adapt these to apply to your own machin
 3.  If you are brand new to git and github, review a few basic facts about git and github.com 
     - detailed information [here](https://ucsb-cs156.github.io/topics/git_overview/)
 
-## Step 6: Finding your demo1- repo on GitHub
+## Step 6: Finding your <tt>{{page.prefix}}</tt> repo on GitHub
 
 Open a web browser and login to GitHub, then navigate to the course organization page, <{{page.course_org}}>.
 
-You should see that there is a private repo in this organization called `demo1-yourGithubId`, where `yourGithubId` is replaced with your GitHub id.  This is the repo
-that you'll be using for this assignment.
+You should see that there is a private repo in this organization called 
+<tt>{{page.prefix}}-cgaucho</tt> where `cgaucho` is your GitHub id
+
+That is the repo that you'll be using for this assignment.
 
 This is currently an empty repo.  In the next step, we'll clone this empty repo into a directory on your local system.
 
 ## Step 7: Cloning the repo
 
 
-1. Login to your CSIL account,  create a `~/cs156` subdirectory, and change directory into it
+1. Create a directory somewhere on your machine for your work this quarter, and change directory into it.  You might called it `allolib` for example, but the name is up to you.
    
    ```
    mkdir ~/allolib
    cd ~/allolib
    ```
 
-   (To be honest, you can actually use any directory you like; but we suggest this approach.  We'll refer
+   (As mentioned above, you can actually use any directory you like; but we suggest this approach.  We'll refer
    to `~/allolib` throughout the rest of
-   the instructions for consistency.
+   the instructions for consistency.)
 
 2. Now, go to the `github.com` web page, and find your `demo1-userid` repo. The page should look something like this:
 
@@ -158,7 +179,7 @@ This is currently an empty repo.  In the next step, we'll clone this empty repo 
    We are now ready to pull in some starter code.
 
 
-## Step 9: A remote for starter
+## Step 9: A remote for the starter code (allolib_playground)
 
 The Allolib Playground repo is here: <{{page.starter_repo}}>
 
@@ -188,10 +209,10 @@ The image below shows how to copy that URL: (1) Click the green `Code` button.  
 
 ![starter-ssh-url-50.png](starter-ssh-url-50.png)
 
-Then, use this command to add a remote called `starter` for the starter code repo:
+Then, use this command to add a remote called `allolib-playground` for the starter code repo:
 
 ```
-git remote add starter paste-url-here
+git remote add allolib-playground paste-url-here
 ```
 
 After this command, use `git remote -v` to list all your remotes. Your output should look like this (except your GitHub id in place of `cgaucho`):
@@ -200,8 +221,8 @@ After this command, use `git remote -v` to list all your remotes. Your output sh
 % git remote -v<br />
 origin	git@github.com:{{page.course_org_name}}/{{page.num}}-cgaucho.git (fetch)<br />
 origin	git@github.com:{{page.course_org_name}}/{{page.num}}-cgaucho.git (push)<br />
-starter	git@github.com:AlloSphere-Research-Group/allolib_playground.git (fetch)<br />
-starter	git@github.com:AlloSphere-Research-Group/allolib_playground.git (push)<br />
+allolib-playground	git@github.com:AlloSphere-Research-Group/allolib_playground.git (fetch)<br />
+allolib-playground	git@github.com:AlloSphere-Research-Group/allolib_playground.git (push)<br />
 % 
 </tt>
 
@@ -214,7 +235,7 @@ Here are the three commands:
 
 ```
 git checkout -b main
-git pull starter main
+git pull allolib-playground main
 git push origin main
 ```
 
@@ -222,11 +243,17 @@ After these three commands, go look at your repo on GitHub, i.e. the repo at thi
 
 * <https://github.com/{{page.course_org_name}}/{{page.prefix}}-cgaucho>
 
-You should see that instead of an empty repo, you now have a copy of the starter code.
+You should see that instead of an empty repo, you now have a copy of the `allolib_playground` starter code.
 
 
-## Step 11: Compile and run the Starter code
+## Step 11: 
 
-Next, you'll want to go through the steps needed to get the repo set up (e.g. the steps in `USING.md`)
+Then: 
+* Set up the preliminaries needed for Allolib: Follow the instructions here for your platform: <https://github.com/AlloSphere-Research-Group/allolib/blob/master/readme.md>
+* Follow the instructions for getting started with Allolib-Playground: <https://github.com/AlloSphere-Research-Group/allolib_playground>
+* Try running the Sine Wave demo:
+  ```
+  ./run.sh tutorials/synthesis/01_SineEnv.cpp
+  ```
 
 

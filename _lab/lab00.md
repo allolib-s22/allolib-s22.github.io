@@ -25,8 +25,11 @@ that is part of the website <https://allolib-s22.github.io>
 
 I've created a repo for each of you with the naming convention: `notes-GitHubId`
 
-Once you set up this repo per the instructions below, the content will be part of the public website
+Once you set up this repo per the instructions below, the content will be part of the *public* website
 where you can share information that you think would be generally useful for the class.
+
+(If you would like to create content that is visible only to the other students in the class, there is a separate repo for that called
+`private-notes-GitHubId`; these instructions will focus on the public facing notes pages for now.)
 
 # Step 1: Add an index.md to your repo.
 
