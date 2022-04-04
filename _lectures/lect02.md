@@ -6,6 +6,31 @@ ready: false
 ---
 
 
+# Wednesday: Questions for Andres Cabrera
+
+
+> Question: I understand that the ./run.sh script is there as an convenient to quickly get started with allolib-playground for "single source file C++ applications".
+> 
+> But suppose I wanted to develop a more complex application, in a manner that is more the norm among experienced C++ software developers.
+> 
+> That would typically involved developing a series of C++ classes in the "normal way" i.e.
+> 
+> The usual practice is to try to develop reusable C++ classes, used code across multiple applications, and with keeping each application main program as small as possible, with only the elements that are unique to each main programming
+> * Each class has it's  API specified is in it's own individual .h or .hpp file
+> * Each class implementations is placed in its own .cpp file 
+> * etc.
+> Is there a good example of how to do that?  Or is that unexplored territory?
+
+> Related:
+> 
+> A typical way to develop with C++ libraries is to create a .a file (or a series of .a files) and then provide a "binary release" of the .a files that is installed into directories such as /include /lib /man etc. that can either be system directories, or better yet, user specified directories to which an individual make file can be pointed.
+>
+> In this way, the users' repo is small, and clean, and has just their own application code, but a binary can still be built that will run.
+>
+> Is there any existing configuration of the allolib-playground ecosystem that has this form factor?
+>
+> If not, is there any interest in doing so?  Any barrier to doing so?  Any reason why doing so would be counterproductive or infeasible to maintain?
+
 # Understanding Allolib Playground
 
 Given that the `allolib-playground` repo has, as it's goal, to make allolib easier to understand for beginners, 
