@@ -41,7 +41,7 @@ The idea is to get your working copy of Allolib up on GitHub where it can be sha
    
    ```
    git checkout -b master
-   git pull allolib_playground master
+   git pull allolib-playground master
    git checkout -b main
    git push origin main
    ```
