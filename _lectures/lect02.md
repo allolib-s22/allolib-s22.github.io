@@ -47,3 +47,6 @@ We'll be concentrating mostly in the `synthesis` directory for now.
 While the `01_SineEnv.cpp` file is offered as the sort of "Hello World" of `allolib-playground`, it is already way too complicated to really play that role well.  So, let's look at a simpler file, where we try to simplify, simplify, simplify.
 
 
+This simpler example can be found here: 
+
+* <https://github.com/allolib-s22/lab01-pconrad/blob/main/tutorials/allolib-s22/010_SimpleSineEnv.cpp>
