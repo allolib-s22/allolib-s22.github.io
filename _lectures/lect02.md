@@ -50,3 +50,7 @@ While the `01_SineEnv.cpp` file is offered as the sort of "Hello World" of `allo
 This simpler example can be found here: 
 
 * <https://github.com/allolib-s22/lab01-pconrad/blob/main/tutorials/allolib-s22/010_SimpleSineEnv.cpp>
+
+An even simpler example appears here.  This one leaves out the graphics part (while leaving the GUI controls in place):
+
+* <https://github.com/allolib-s22/lab01-pconrad/blob/main/tutorials/allolib-s22/005_SimplerSineEnv.cpp>
