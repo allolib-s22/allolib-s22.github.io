@@ -46,7 +46,13 @@ The idea is to get your working copy of Allolib up on GitHub where it can be sha
    git push origin main
    ```
 
-5. Now, you should be able to publish new branches and or changes as needed.
+5. Run the command inside `init.sh`:
+
+   ```
+   git submodule update --init --recursive
+   ```
+
+6. Now, you should be able to publish new branches and or changes as needed.
 
 Then: 
 * Set up the preliminaries needed for Allolib: Follow the instructions here for your platform: <https://github.com/AlloSphere-Research-Group/allolib/blob/master/readme.md>
@@ -232,8 +238,9 @@ that code to your origin repo on GitHub.
 Here are the three commands:
 
 ```
+git checkout -b master
+git pull allolib-playground master
 git checkout -b main
-git pull allolib-playground main
 git push origin main
 ```
 
@@ -243,8 +250,68 @@ After these three commands, go look at your repo on GitHub, i.e. the repo at thi
 
 You should see that instead of an empty repo, you now have a copy of the `allolib_playground` starter code.
 
+## Step 6: Populate the submodules
 
-## Step 6: 
+The `allolib-playground` repo points to a collection of other repos that contain software that the `allolib-playground` needs in order to 
+function.
+
+There is a command in the file `init.sh` that you should type to initialize the submodules:
+
+```
+git submodule update --init --recursive
+```
+
+If it works, it will look like this; it may take 5-10 minutes to work, depending on the speed of your internet connection and your computer:
+
+```
+pconrad@Phillips-MacBook-Pro lab01-pconrad % git submodule update --init --recursive
+Submodule 'al_ext' (https://github.com/AlloSphere-Research-Group/al_ext) registered for path 'al_ext'
+Submodule 'allolib' (https://github.com/AlloSphere-Research-Group/allolib) registered for path 'allolib'
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/al_ext'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib'...
+Submodule path 'al_ext': checked out 'bb45e9229ada686fca0a916c3877a65afe50b943'
+Submodule 'statedistribution/cuttlebone' (https://github.com/kybr/cuttlebone.git) registered for path 'al_ext/statedistribution/cuttlebone'
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/al_ext/statedistribution/cuttlebone'...
+remote: Enumerating objects: 66, done.
+remote: Counting objects: 100% (66/66), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 66 (delta 44), reused 60 (delta 38), pack-reused 0
+Unpacking objects: 100% (66/66), 15.30 KiB | 333.00 KiB/s, done.
+From https://github.com/kybr/cuttlebone
+ * branch            178dbd4a7f46c984e32c98ad61c5fb35f8ac1579 -> FETCH_HEAD
+Submodule path 'al_ext/statedistribution/cuttlebone': checked out '178dbd4a7f46c984e32c98ad61c5fb35f8ac1579'
+Submodule path 'allolib': checked out 'ac68b234712c796e8c45c3032b304b727ec6c249'
+Submodule 'external/Gamma' (https://github.com/AlloSphere-Research-Group/Gamma.git) registered for path 'allolib/external/Gamma'
+Submodule 'external/cpptoml' (https://github.com/skystrife/cpptoml.git) registered for path 'allolib/external/cpptoml'
+Submodule 'external/glfw' (https://github.com/glfw/glfw.git) registered for path 'allolib/external/glfw'
+Submodule 'external/imgui' (https://github.com/ocornut/imgui.git) registered for path 'allolib/external/imgui'
+Submodule 'external/json' (https://github.com/nlohmann/json) registered for path 'allolib/external/json'
+Submodule 'external/rtaudio' (https://github.com/thestk/rtaudio.git) registered for path 'allolib/external/rtaudio'
+Submodule 'external/rtmidi' (https://github.com/thestk/rtmidi) registered for path 'allolib/external/rtmidi'
+Submodule 'external/serial' (https://github.com/wjwwood/serial) registered for path 'allolib/external/serial'
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/Gamma'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/cpptoml'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/glfw'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/imgui'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/json'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/rtaudio'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/rtmidi'...
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/serial'...
+Submodule path 'allolib/external/Gamma': checked out 'ad80ed56eb37449378b6852d2f37b908c93e8d3c'
+Submodule path 'allolib/external/cpptoml': checked out 'fededad7169e538ca47e11a9ee9251bc361a9a65'
+Submodule 'deps/meta-cmake' (https://github.com/meta-toolkit/meta-cmake.git) registered for path 'allolib/external/cpptoml/deps/meta-cmake'
+Cloning into '/Users/pconrad/github/allolib-s22/lab01-pconrad/allolib/external/cpptoml/deps/meta-cmake'...
+Submodule path 'allolib/external/cpptoml/deps/meta-cmake': checked out 'db7ff976c430a6cb6cbd03ae691be04cfaac0a07'
+Submodule path 'allolib/external/glfw': checked out 'b0796109629931b6fa6e449c15a177845256a407'
+Submodule path 'allolib/external/imgui': checked out '95c99aaa4be611716093edcb6b01146ab9483f30'
+Submodule path 'allolib/external/json': checked out 'db78ac1d7716f56fc9f1b030b715f872f93964e4'
+Submodule path 'allolib/external/rtaudio': checked out 'd27f257b4bc827e4152cdc4d69a2e22084204afd'
+Submodule path 'allolib/external/rtmidi': checked out 'dc7575db8f3f421264b2ee585bdf097ad1f402c5'
+Submodule path 'allolib/external/serial': checked out '683e12d2f6a26c80bfa07f276845be618237ae5b'
+pconrad@Phillips-MacBook-Pro lab01-pconrad %
+```
+
+## Step 7: Set up Allolib dependencies
 
 Then: 
 * Set up the preliminaries needed for Allolib: Follow the instructions here for your platform: <https://github.com/AlloSphere-Research-Group/allolib/blob/master/readme.md>
