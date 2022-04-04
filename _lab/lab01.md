@@ -14,8 +14,6 @@ prefix: lab01
 ---
 
 
-# STILL A WORK IN PROGRESS... PLEASE IGNORE FOR NOW
-
 This assignment is `lab01`
 
 If you find typos or problems with the lab instructions, please report
