@@ -91,7 +91,7 @@ Note: if you have some reason why you strongly prefer not to associate your UCSB
 In this case, please let Phill know your GitHub id.
 
 
-## Step 5: Configure ssh keys for  your machine for git/GitHub
+## Step 2: Configure ssh keys for  your machine for git/GitHub
 
 
 It's convenient  to be able to use `git` and GitHub with ssh links, so for that we need to set up public-key/private-key pairs.
@@ -107,7 +107,7 @@ oriented towards "CSIL"; you may need to adapt these to apply to your own machin
 3.  If you are brand new to git and github, review a few basic facts about git and github.com 
     - detailed information [here](https://ucsb-cs156.github.io/topics/git_overview/)
 
-## Step 6: Finding your <tt>{{page.prefix}}</tt> repo on GitHub
+## Step 3: Finding your <tt>{{page.prefix}}</tt> repo on GitHub
 
 Open a web browser and login to GitHub, then navigate to the course organization page, <{{page.course_org}}>.
 
@@ -118,7 +118,7 @@ That is the repo that you'll be using for this assignment.
 
 This is currently an empty repo.  In the next step, we'll clone this empty repo into a directory on your local system.
 
-## Step 7: Cloning the repo
+## Step 3: Cloning the repo
 
 
 1. Create a directory somewhere on your machine for your work this quarter, and change directory into it.  You might called it `allolib` for example, but the name is up to you.
@@ -177,7 +177,7 @@ This is currently an empty repo.  In the next step, we'll clone this empty repo 
    We are now ready to pull in some starter code.
 
 
-## Step 9: A remote for the starter code (allolib_playground)
+## Step 4: A remote for the starter code (allolib_playground)
 
 The Allolib Playground repo is here: <{{page.starter_repo}}>
 
@@ -224,7 +224,7 @@ allolib-playground	git@github.com:AlloSphere-Research-Group/allolib_playground.g
 % 
 </tt>
 
-## Step 10: Pull Starter Code into your Repo
+## Step 5: Pull Starter Code into your Repo
 
 The next step is to pull the starter code into your repo, and then push
 that code to your origin repo on GitHub.
@@ -244,7 +244,7 @@ After these three commands, go look at your repo on GitHub, i.e. the repo at thi
 You should see that instead of an empty repo, you now have a copy of the `allolib_playground` starter code.
 
 
-## Step 11: 
+## Step 6: 
 
 Then: 
 * Set up the preliminaries needed for Allolib: Follow the instructions here for your platform: <https://github.com/AlloSphere-Research-Group/allolib/blob/master/readme.md>
