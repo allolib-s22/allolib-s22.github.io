@@ -5,3 +5,8 @@ desc: ""
 ready: true
 ---
 
+
+Allotemplate: https://github.com/AlloSphere-Research-Group/allotemplate
+
+A solution for building a standalone app (with a smaller starting repo).
+
