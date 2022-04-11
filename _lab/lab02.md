@@ -4,7 +4,7 @@ assigned: 2021-03-30 12:30
 due: 2021-04-06 11:00
 layout: lab
 num: lab02
-ready: true
+ready: false
 slack: https://allolib-s22.slack.com
 course_org: https://github.com/allolib-s22
 course_org_name: allolib-s22
