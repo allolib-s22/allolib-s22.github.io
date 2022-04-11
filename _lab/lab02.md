@@ -41,9 +41,27 @@ This lab checks that you can succesfully create a piece using the Allotemplate r
    * `mkdir -p allolib` means: m ke a directory(folder) called `allolib`.  The `-p` means: don't complain if one already exists.
    * `cd allolib` puts you into that directory(folder)
    
+   
+3. Go to the page for your <tt>{{page.num}}-<i>yourGitHubId</i></tt> repo and get the `ssh` link for that repo.
+
+   Then, clone that into your current directory, and cd into that directory:
+   
+   ```
+   pconrad@Phillips-MacBook-Pro allolib-s22 % git clone git@github.com:allolib-s22/lab02-pconrad.git
+   Cloning into 'lab02-pconrad'...
+   warning: You appear to have cloned an empty repository.
+   pconrad@Phillips-MacBook-Pro allolib-s22 % ls     
+   allolib-s22.github.io	lab01-pconrad		lab02-pconrad
+   pconrad@Phillips-MacBook-Pro allolib-s22 % cd lab02-pconrad 
+   pconrad@Phillips-MacBook-Pro lab02-pconrad % 
+   ```
 4. Add a remote for the `allotemplate` repo:
    
    <tt>git remote add allotemplate {{page.starter_repo_ssh}}</tt>
+   
+   ```
+   ```
+ 
    
 5. Do these commands to get a copy of `allotemplate/master` into your local repo as
    the `origin/main` branch:
