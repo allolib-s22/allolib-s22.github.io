@@ -73,15 +73,17 @@ This lab checks that you can succesfully create a piece using the Allotemplate r
    git push origin main
    ```
 
-5. Run this command to update the submodules (allolib, etc.)
-
+5. DO NOT run the commands inside `./init.sh`!  These will destroy the git history that you already have, and the remotes you
+   created.
+   
+   Instead, run only these commands.  These may take several minutes to complete, depending on the speed of your internet
+   connection:
+   
    ```
-   git submodule update --init --recursive
+   git submodule add https://github.com/AlloSphere-Research-Group/allolib.git
+   git submodule add https://github.com/AlloSphere-Research-Group/al_ext.git
+   git submodule update --recursive --init
    ```
-
-6. Now, you should be able to publish new branches and or changes as needed.
-
-
 
 
 
