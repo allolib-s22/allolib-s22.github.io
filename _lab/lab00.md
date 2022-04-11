@@ -4,7 +4,7 @@ assigned: 2021-03-29 12:30
 due: 2021-04-02 23:59
 layout: lab
 num: lab00
-ready: false
+ready: true
 signup_app: https://ucsb-cs-github-linker.herokuapp.com/
 slack: https://allolib-s22.slack.com
 course_org: https://github.com/allolib-s22
