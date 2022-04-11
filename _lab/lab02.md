@@ -85,9 +85,21 @@ This lab checks that you can succesfully create a piece using the Allotemplate r
    git submodule update --recursive --init
    ```
 
+   I suggest that you delete `./init.sh` and commit that change:
+   
+   ```
+   git rm init.sh
+   git commit -m "remove init.sh"
+   git push origin main
+   ```
 
+6. To run the code:
 
+   ```
+   ./configure.sh
+   ./run.sh
+   ```
 
-
-
-
+   The `./configure.sh` step is likely needed only the first time, while the `./run.sh` step is needed each time.
+   
+   
