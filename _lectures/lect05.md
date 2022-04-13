@@ -8,6 +8,10 @@ ready: true
 The Allolib students from S21 produced a lot of useful stuff.  Here are some examples:
 
 Adam S. created a library of great sounds for Allolib:
-* <https://allolib-s21.github.io/notes-adamschmieder/>
+* Documentation as HTML: <https://allolib-s21.github.io/notes-adamschmieder/>
+* Code and Documentation in Markdown: <https://allolib-s21.github.io/notes-adamschmieder/>
+
+
+
 
 
