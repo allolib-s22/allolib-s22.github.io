@@ -9,7 +9,7 @@ The Allolib students from S21 produced a lot of useful stuff.  Here are some exa
 
 Adam S. created a library of great sounds for Allolib:
 * Documentation as HTML: <https://allolib-s21.github.io/notes-adamschmieder/>
-* Code and Documentation in Markdown: <https://allolib-s21.github.io/notes-adamschmieder/>
+* Code and Documentation in Markdown: <https://github.com/allolib-s21/notes-adamschmieder/>
 
 
 
