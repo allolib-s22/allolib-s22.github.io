@@ -30,3 +30,5 @@ In particular:
 * Collete L's chord program:
   * Original: <https://github.com/allolib-s21/demo1-colette-lee/blob/master/tutorials/synthesis/081_Sub_Chords.cpp>
   * Adapted by P. Conrad with some comments, and keymappings that work on Mac: <https://github.com/allolib-s21/demo1-pconrad/blob/master/tutorials/allolib-s21/082_Sub_Chords_Mac.cpp>
+* For some C++ abstractions for music theory notions, check out Mitchell's work from S21:
+  * <https://github.com/allolib-s21/notes-Mitchell57>
