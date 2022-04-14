@@ -19,7 +19,7 @@ Conrad's Additional Examples from S22:
 * <https://github.com/allolib-s22/lab01-pconrad/tree/main/tutorials/allolib-s22>
 
 Conrad's Additional Examples from S21:
-* <https://github.com/allolib-s21/demo1-pconrad/tree/main/tutorials/allolib-s21>
+* <https://github.com/allolib-s21/demo1-pconrad/tree/master/tutorials/allolib-s21>
 
 Where to look for more stuff from the S21 students:
 * In this organization, look at `demo01-*` and `NOTES-*` repos: <https://github.com/allolib-s21>
