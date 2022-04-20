@@ -1,6 +1,6 @@
 ---
-num: "Lecture 04: Wednesday: some useful stuff from the s21 students"
-lecture_date: 2022-04-11
+num: "Lecture 05: Wednesday: some useful stuff from the s21 students"
+lecture_date: 2022-04-13
 desc: "Including Adam S.'s presets"
 ready: true
 ---
